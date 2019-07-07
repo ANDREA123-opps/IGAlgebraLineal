@@ -9,8 +9,8 @@ public class IGMatR2 {
 private int filas;
 private int columnas;
 private double matriz[][];
-    private IGMatR2 mat;
     private int num;
+    private int colX;
     double x1,y1;
     double x2,y2;
     IGVecR2 f1;
@@ -43,7 +43,13 @@ public int getFilas(){
     public void setFilas(int filas) {
         this.filas = filas;
     }
+ public int getColx() {
+    return colX ;
+ }
 
+ public void setColX(int colX ){
+        this.colX = colX;
+ }
     //Constructor
     public IGMatR2(int filas, int columnas){
     this.filas = filas;
@@ -62,16 +68,13 @@ public int getFilas(){
     }
 
 
-
-
-
    public IGMatR2 mul(IGMatR2 b){
-        IGMatR2 matC = new IGMatR2(filas,mat.columnas);
+        IGMatR2 matC = new IGMatR2(filas,b.columnas);
         for (int i = 0; i<filas; i++){
-            for (int j = 0; j<mat.columnas; j++){
+            for (int j = 0; j<b.columnas; j++){
                 int sum = 0;
                 for (double k = 0; k<columnas; k++){
-                    sum = matriz[i][j] * mat.matriz[k][j];
+                    sum = (int) (matriz[i][(int) k] * b.matriz[(int) k][j]);
                 }
                 matC.matriz[i][j] = sum;
             }
@@ -79,29 +82,44 @@ public int getFilas(){
         return matC;
     }
 
-    public IGVecR2 colXMat(IGVecR2 col){
-
+    public IGMatR2 colXMat(IGVecR2 col){
+        IGMatR2 resultado = new IGMatR2(filas, columnas);
+        for (int i = 0; i<filas; i++){
+            for (int j = 0; j<columnas; j++){
+                for (int k = 0; k<columnas; k++){
+                   resultado = colX[k] * matriz[i][j];
+                }
+            }
+        }
+        return resultado;
    }
 
       public IGMatR2 suma (IGMatR2 b) {
        IGMatR2 resultado = new IGMatR2(filas, columnas);
                 for (int i = 0; i<filas; i++){
                     for (int j = 0; j<columnas; j++){
-                        resultado.matriz[i][j] = matriz[i][j] + mat.matriz[i][j];
+                        resultado.matriz[i][j] = matriz[i][j] + b.matriz[i][j];
                     }
                 }
 return resultado;
 }
 
     public IGMatR2 escalarXmat(double escalar){
-
+        IGMatR2 resultado = new IGMatR2(filas, columnas);
+        for (int i = 0; i<filas; i++){
+            for (int j = 0; j<columnas; j++){
+                resultado.matriz[i][j] = num * matriz[i][j];
+                }
+            }
+    return resultado;
     }
 
     public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
 
+    return null;
     }
 
 
 
       }
-}
+
