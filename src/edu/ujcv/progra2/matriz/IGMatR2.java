@@ -29,11 +29,13 @@ public void setColumnas(int columnas){
 }
 
 public double[][] getMatriz() {
-    return matriz;
+
+        return matriz;
 }
 
 public void setMatriz(double[][] matriz){
-    this.matriz = matriz;
+
+        this.matriz = matriz;
 }
 
 public int getFilas(){
@@ -41,10 +43,12 @@ public int getFilas(){
 }
 
     public void setFilas(int filas) {
+
         this.filas = filas;
     }
  public int getColx() {
-    return colX ;
+
+        return colX ;
  }
 
  public void setColX(int colX ){
@@ -87,7 +91,8 @@ public int getFilas(){
         for (int i = 0; i<filas; i++){
             for (int j = 0; j<columnas; j++){
                 for (int k = 0; k<columnas; k++){
-                   resultado = colX[k] * matriz[i][j];
+                   resultado.x1 = ;
+                   resultado.x2 =
                 }
             }
         }
@@ -104,6 +109,16 @@ public int getFilas(){
 return resultado;
 }
 
+    public IGMatR2 resta (IGMatR2 b) {
+        IGMatR2 resultado = new IGMatR2(filas, columnas);
+        for (int i = 0; i<filas; i++){
+            for (int j = 0; j<columnas; j++){
+                resultado.matriz[i][j] = matriz[i][j] +(- b.matriz[i][j]);
+            }
+        }
+        return resultado;
+    }
+
     public IGMatR2 escalarXmat(double escalar){
         IGMatR2 resultado = new IGMatR2(filas, columnas);
         for (int i = 0; i<filas; i++){
@@ -118,8 +133,4 @@ return resultado;
 
     return null;
     }
-
-
-
-      }
-
+}

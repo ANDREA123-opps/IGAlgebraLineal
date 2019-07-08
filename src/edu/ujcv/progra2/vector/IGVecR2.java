@@ -16,9 +16,27 @@ public class IGVecR2 {
     //this es el vector a
     // c.x = a.x + b.x
     // c.y = a.y + b.y
+
+   private double x;
+   private double y;
+
+    public IGVecR2() {
+        this.x = 0;
+        this.y = 0;
+    }
+    public IGVecR2(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public IGVecR2(IGVecR2 b){
+        this.x = b.x;
+        this.y = b.y;
+    }
+
     public IGVecR2 suma(IGVecR2 b){
-        //TODO: implementar
-        return new IGVecR2();
+       IGVecR2  retval = new IGVecR2();
+        retval = (x + b.x);
     }
 
     public IGVecR2 resta(IGVecR2 b){
