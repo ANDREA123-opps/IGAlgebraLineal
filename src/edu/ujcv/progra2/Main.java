@@ -56,7 +56,41 @@ public class Main {
                                     switch (opc){
 
                                         case 1:
-                                            System.out.println("Selecciono vector en R2"); break;
+                                            int opc1;
+                                            System.out.println("Selecciono vector en R2");
+                                            System.out.println("");
+                                            System.out.println("Seleccione el operador");
+                                            System.out.println("1- suma de vectores     ");    System.out.println("     5- Angulo");
+                                            System.out.println("2- resta de vectores    ");    System.out.println("     6- Magnitud");
+                                            System.out.println("3- Escalar por un vector     ");    System.out.println("     7- Volver atras");
+                                            System.out.println("4- Producto punto");
+                                            opc1 = sc.nextInt();
+
+                                            switch (opc1){
+                                                case 1:
+                                                    System.out.println("Suma de vectores"); break;
+
+                                                case 2:
+                                                    System.out.println("Resta de vectores"); break;
+
+                                                case 3:
+                                                    System.out.println("Escalar por un vector"); break;
+
+                                                case 4:
+                                                    System.out.println("Producto punto"); break;
+
+                                                case 5:
+                                                    System.out.println("Angulo"); break;
+
+                                                case 6:
+                                                    System.out.println("Magnitud"); break;
+
+                                                case 7:
+                                                    break;
+
+                                            }
+
+                                            break;
 
                                         case 2:
                                             System.out.println("Selecciono vector en R3"); break;
