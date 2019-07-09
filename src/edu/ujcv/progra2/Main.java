@@ -59,6 +59,7 @@ public class Main {
                                             int opc1;
                                             System.out.println("Selecciono vector en R2");
                                             System.out.println("");
+                                            do {
                                             System.out.println("Seleccione el operador");
                                             System.out.println("1- suma de vectores     ");    System.out.println("     5- Angulo");
                                             System.out.println("2- resta de vectores    ");    System.out.println("     6- Magnitud");
@@ -87,8 +88,8 @@ public class Main {
 
                                                 case 7:
                                                     break;
-
-                                            }
+}
+                                            } while (opc1<3);
 
                                             break;
 
