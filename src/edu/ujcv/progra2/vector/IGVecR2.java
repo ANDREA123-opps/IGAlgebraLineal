@@ -14,6 +14,8 @@ public class IGVecR2 {
     //publico interfase
 
     //this es el vector a
+
+
     // c.x = a.x + b.x
     // c.y = a.y + b.y
 
@@ -36,7 +38,10 @@ public class IGVecR2 {
 
     public IGVecR2 suma(IGVecR2 b){
        IGVecR2  retval = new IGVecR2();
-        retval = (x + b.x);
+      retval.x = x + b.x;
+      retval.y = y + b.y;
+
+return retval;
     }
 
     public IGVecR2 resta(IGVecR2 b){
