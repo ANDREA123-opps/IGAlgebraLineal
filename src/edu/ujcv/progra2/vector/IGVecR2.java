@@ -80,7 +80,7 @@ public class IGVecR2 {
         return new IGVecR2();
     }
 
-    public IGVecR2 productoPunto(IGVecR2 b){
+    public double productoPunto(IGVecR2 b){
         //TODO: implementar
         double x = this.x * b.x;
         double y = this.y * b.y;
