@@ -22,14 +22,47 @@ public class IGVecR3 {
         this.z = b.z;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
     public IGVecR3 suma(IGVecR3 b){
         //TODO: implementar
-        return new IGVecR3();
+        IGVecR3 retval = new IGVecR3();
+        retval.setX(this.getX()+b.getX());
+        retval.setY(this.getY()+b.getY());
+        retval.setZ(this.getZ()+b.getZ());
+        return retval;
+
     }
 
     public IGVecR3 resta(IGVecR3 b){
         //TODO: implementar
-        return new IGVecR3();
+        IGVecR3 retval = new IGVecR3();
+        retval.setX(this.getX()-b.getX());
+        retval.setY(this.getY()-b.getY());
+        retval.setZ(this.getZ()-b.getZ());
+        return retval;
     }
 
     //producto.

@@ -16,24 +16,46 @@ public class IGMatR2 {
     private IGVecR2 col2;
 
     //Constructor
-
     public IGMatR2(){
-      this.x1 = 0;
-      this.y1 = 0;
-    }
-    public IGMatR2(double x1, double y1){
-        this.x1 = x1;
-        this.y1 = y1;
-    }
-    public IGMatR2(IGMatR2 b){
-        this.x1 = b.x1;
-        this.y1 = b.y1;
+        col1 = new IGVecR2(1,0);
+        col2 = new IGVecR2(0,1);
     }
 
-public
+    public IGVecR2 getCol1(){
+        return col1;
+    }
 
+    public void setCol1(IGVecR2 col1) {
+        this.col1 = col1;
+    }
 
-   public IGMatR2 mul(IGMatR2 b){
+    public IGVecR2 getCol2(){
+        return col2;
+    }
+
+    public void setCol2(IGVecR2 col2) {
+        this.col2 = col2;
+    }
+
+    public IGVecR2 getF1(){
+        IGVecR2 retval = new IGVecR2(col1.getX(), col2.getX());
+        return retval;
+    }
+    public void setF1(){
+        this.col1.setX(f1.getX());
+        this.col2.setX(f1.getY());
+    }
+    public IGVecR2 getF2(){
+        IGVecR2 retval = new IGVecR2(col1.getY(), col2.getY());
+        return retval;
+    }
+
+    public void setF2(IGVecR2 f2) {
+        this.col1.setY(f2.getX());
+        this.col2.setY(f2.getY());
+    }
+
+    public IGMatR2 mul(IGMatR2 b){
       IGMatR2 retval = new IGMatR2();
 
 

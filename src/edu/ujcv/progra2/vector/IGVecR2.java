@@ -35,6 +35,21 @@ public class IGVecR2 {
         this.x = b.x;
         this.y = b.y;
     }
+    public double getX(){
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
 
     public IGVecR2 suma(IGVecR2 b) {
         IGVecR2 retval = new IGVecR2();
