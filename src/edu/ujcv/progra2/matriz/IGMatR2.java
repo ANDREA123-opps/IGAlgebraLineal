@@ -55,10 +55,10 @@ public class IGMatR2 {
 
     public IGMatR2 mul(IGMatR2 b){
       IGMatR2 retval = new IGMatR2();
-      retval.col1.setX(this.getF1().dotProducto(b.col1));
-      retval.col1.setY(this.getF2().dotProducto(b.col1));
-      retval.col2.setX(this.getF1().dotProducto(b.col2));
-      retval.col2.setY(this.getF2().dotProducto(b.col2));
+      retval.col1.setX(this.getF1().productoPunto(b.col1));
+      retval.col1.setY(this.getF2().productoPunto(b.col1));
+      retval.col2.setX(this.getF1().productoPunto(b.col2));
+      retval.col2.setY(this.getF2().productoPunto(b.col2));
       return  retval;
 
     }
@@ -66,8 +66,8 @@ public class IGMatR2 {
     public IGVecR2 colXMat(IGVecR2 col){
     IGVecR2 retval = new IGVecR2();
     IGMatR2 a = new IGMatR2();
-    a.col1.setX(this.getF1().dotProduct(a.col1));
-    a.col1.setX(this.getF2().dotProduct(a.col1));
+    a.col1.setX(this.getF1().productoPunto(a.col1));
+    a.col1.setX(this.getF2().productoPunto(a.col1));
     return retval;
    }
 
@@ -100,6 +100,6 @@ public class IGMatR2 {
 
     public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
 
-
+    return null;
     }
 }

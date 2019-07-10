@@ -18,8 +18,12 @@ public class IGVecR2 {
 
     // c.x = a.x + b.x
     // c.y = a.y + b.y
+    double x1 = 0;
+    double x2 = 0;
+    double y1 = 0;
+    double y2 = 0;
 
-   private double x;
+    private double x;
    private double y;
 
     public IGVecR2() {
@@ -52,30 +56,36 @@ public class IGVecR2 {
     }
 
     public IGVecR2 suma(IGVecR2 b) {
-        IGVecR2 retval = new IGVecR2();
-        retval.x = x + b.x;
-        retval.y = y + b.y;
+        x = this.x + b.x;
+        y = this.y + b.y;
+        IGVecR2 retval = new IGVecR2(x, y);
         return retval;
     }
 
 
     public IGVecR2 resta(IGVecR2 b){
         //TODO: implementar
-        IGVecR2 retval = new IGVecR2();
-        retval.x = x - b.x;
-        retval.y = x - b.y;
+        x = this.x - b.x;
+        y = this.y - b.y;
+        IGVecR2 retval = new IGVecR2(x, y);
         return retval;
     }
 
     //producto.
     public  IGVecR2 escalarPorVector(double alpha){
         //TODO: implementar
+        IGVecR2 retval = new IGVecR2();
+        retval.x = x*alpha;
+        retval.y = y*alpha;
         return new IGVecR2();
     }
 
-    public double productoPunto(IGVecR2 b){
+    public IGVecR2 productoPunto(IGVecR2 b){
         //TODO: implementar
-        return 0.0;
+        double x = this.x * b.x;
+        double y = this.y * b.y;
+        IGVecR2 retval = new IGVecR2(x, y);
+        return retval;
     }
 
 
@@ -85,19 +95,25 @@ public class IGVecR2 {
     //}
 
 
-    public double determinante(){
+   // public double determinante(){
         //TODO: implementar
-        return 0.0;
-    }
+     //   return 0.0;
+    //}
 
     public double angulo(IGVecR2 b){
         //TODO: implementar
-        return 0.0;
+        double retval;
+        double xy = (x1 * y1)+(x2 * y2);
+        double a = (Math.sqrt((x1*x1)+(x2*x2)) * Math.sqrt((y1*y1)+(y2*y2)));
+        retval = Math.cos(xy / a);
+        return retval;
     }
 
     public double magnitud(){
-        return Math.sqrt(productoPunto(this));
+       // return Math.sqrt(productoPunto(this));
+        return Math.sqrt((this.x * this.x)+(this.y * this.y));
     }
+
 
 
 }
