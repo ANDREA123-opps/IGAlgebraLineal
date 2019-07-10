@@ -1,6 +1,7 @@
 package edu.ujcv.progra2.vector;
 
 public class IGVecR2 {
+    public IGVecR2 col1;
 
     //privado los datos
     // un escalar que represente 'x' y 'y' los componentes del vector
@@ -80,7 +81,7 @@ public class IGVecR2 {
         return new IGVecR2();
     }
 
-    public double productoPunto(IGVecR2 b){
+    public IGVecR2 productoPunto(IGVecR2 b){
         //TODO: implementar
         double x = this.x * b.x;
         double y = this.y * b.y;
