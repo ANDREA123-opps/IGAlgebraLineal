@@ -2,8 +2,6 @@ package edu.ujcv.progra2.matriz;
 
 import edu.ujcv.progra2.vector.IGVecR2;
 
-import javax.swing.*;
-
 public class IGMatR2 {
     // TODO: implementar.
 
@@ -55,22 +53,40 @@ public class IGMatR2 {
         this.col2.setY(f2.getY());
     }
 
-    public IGMatR2 mul(IGMatR2 b){
+    public IGMatR2 mul(double b){
       IGMatR2 retval = new IGMatR2();
-
+      retval.col1.setX(this.col1.getX()*b);
+      retval.col1.setY(this.col1.getY()*b);
+      retval.col2.setX(this.col2.getX()*b);
+      retval.col2.setY(this.col2.getY()*b);
+      return  retval;
 
     }
 
-    public IGMatR2 colXMat(IGVecR2 col){
-
+    public IGVecR2 colXMat(IGVecR2 col){
+    IGVecR2 retval = new IGVecR2();
+    IGMatR2 a = new IGMatR2();
+    a.col1.setX(this.getF1().dotProduct(a.col1));
+    a.col1.setX(this.getF2().dotProduct(a.col1));
+    return retval;
    }
 
       public IGMatR2 suma (IGMatR2 b) {
-
-}
+      IGMatR2 retval = new IGMatR2();
+      retval.col1.setX(this.col1.getX()+b.col1.getX());
+      retval.col1.setY(this.col1.getY()+b.col1.getY());
+      retval.col2.setX(this.col2.getX()+b.col2.getX());
+      retval.col2.setY(this.col2.getY()+b.col2.getY());
+      return retval;
+    }
 
     public IGMatR2 resta (IGMatR2 b) {
-
+        IGMatR2 retval = new IGMatR2();
+        retval.col1.setX(this.col1.getX()-b.col1.getX());
+        retval.col1.setY(this.col1.getY()-b.col1.getY());
+        retval.col2.setX(this.col2.getX()-b.col2.getX());
+        retval.col2.setY(this.col2.getY()-b.col2.getY());
+        return retval;
     }
 
     public IGMatR2 escalarXmat(double escalar){
