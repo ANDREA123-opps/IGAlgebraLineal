@@ -36,17 +36,20 @@ public class IGVecR2 {
         this.y = b.y;
     }
 
-    public IGVecR2 suma(IGVecR2 b){
-       IGVecR2  retval = new IGVecR2();
-      retval.x = x + b.x;
-      retval.y = y + b.y;
-
-return retval;
+    public IGVecR2 suma(IGVecR2 b) {
+        IGVecR2 retval = new IGVecR2();
+        retval.x = x + b.x;
+        retval.y = y + b.y;
+        return retval;
     }
+
 
     public IGVecR2 resta(IGVecR2 b){
         //TODO: implementar
-        return new IGVecR2();
+        IGVecR2 retval = new IGVecR2();
+        retval.x = x - b.x;
+        retval.y = x - b.y;
+        return retval;
     }
 
     //producto.
