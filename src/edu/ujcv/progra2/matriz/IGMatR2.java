@@ -53,7 +53,7 @@ public class IGMatR2 {
         this.col2.setY(f2.getY());
     }
 
-    public IGMatR2 mul(IGMatR2 b){
+    public IGMatR2 mul(IGVecR2 b){
       IGMatR2 retval = new IGMatR2();
       retval.col1.setX(this.getF1().productoPunto(b.col1));
       retval.col1.setY(this.getF2().productoPunto(b.col1));
@@ -98,12 +98,14 @@ public class IGMatR2 {
     return retval;
     }
 
-    public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
-        IGVecR2 retval = new IGVecR2();
-        IGMatR2 a = new IGMatR2();
-        a.col1.setX(thi.col1.getX(Math.cos(angulo)).b.col1.getX())
-        a.col1.setY((Math.sin(angulo)));
-
+    public static IGMatR2 rotacion (double angulo, IGVecR2 vector){
+      IGMatR2 rot = new IGMatR2();
+      double x;
+      rot.col1.x = Math.cos(angulo);
+      rot.col2.x = -Math.sin(angulo);
+      rot.col1.x = Math.sin(angulo);
+      rot.col2.x = Math.cos(angulo);
+      return rot.mul(vector);
     return null;
     }
 }
