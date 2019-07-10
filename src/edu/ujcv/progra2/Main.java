@@ -5,39 +5,15 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         Scanner sc = new Scanner(System.in);
-        int lector = 3;
-        char e;
-        while (lector == 3) {
 
-            System.out.println("............Bienvenido............. ");
-            System.out.println("");
-            System.out.println("-- Seleccione la calculadora a utilizar --");
-            System.out.println("1 - Calculadora Basica.");
-            System.out.println("2 - Calculadora de Algebra Lineal.");
-            System.out.println("3 - Salir.");
-            System.out.println("");
-            System.out.println("Escriba una de las opciones");
-            lector = sc.nextInt();
-
-            switch (lector) {
-                case 1:
-
-                    do {
-                        System.out.println("Has seleccionado la calculadora basica!! ");
-
-                    } while (lector<3);
-                break;
-
-                case 2:
                 int opcion;
-                    System.out.println("Has seleccionado la calculadora de algebra lineal!!");
+                    System.out.println("----- BIENVENIDO A LA CALCULADORA DE ALGEBRA LINEAL -----");
 
                     do {
-                        System.out.println("-- BIENVENIDO A LA CALCULADORA LINEAL --");
                         System.out.println("Selecciones la operacion que desee");
                         System.out.println("1- Vectores");
                         System.out.println("2- Matrices");
-                        System.out.println("3- Volver atras");
+                        System.out.println("3- Salir");
                         opcion = sc.nextInt();
 
                         switch (opcion){
@@ -94,10 +70,16 @@ public class Main {
                                             break;
 
                                         case 2:
-                                            System.out.println("Selecciono vector en R3"); break;
+                                            System.out.println("Selecciono vector en R3");
+                                            System.out.println("Rotacion en X");
+                                            System.out.println("Rotacion en Y");
+                                            System.out.println("Rotacion en Z"); break;
 
                                         case 3:
-                                            System.out.println("Selecciono vector en R4"); break;
+                                            System.out.println("Selecciono vector en R4");
+                                            System.out.println("Rotacion en X");
+                                            System.out.println("Rotacion en Y");
+                                            System.out.println("Rotacion en Z"); break;
 
                                         case 4:
                                           break;
@@ -127,7 +109,38 @@ public class Main {
                                     switch (opcs){
 
                                         case 1:
-                                            System.out.println("Seleciono matriz en R2"); break;
+                                            int opc2;
+                                            System.out.println("Seleciono matriz en R2");
+
+                                            do {
+                                                System.out.println("Seleccione el operador");
+                                                System.out.println("1- suma de matrices    ");    System.out.println("     5- multipliacion de matrices ");
+                                                System.out.println("2- resta de matrices   ");    System.out.println("     6- rotacion de matrices");
+                                                System.out.println("3- multiplicacion por un Escalar      ");    System.out.println("     7- Volver atras");
+                                                System.out.println("4- multilplicacion de una columna por una matriz");
+                                                opc2 = sc.nextInt();
+
+                                                switch (opc2){
+                                                    case 1:
+                                                        System.out.println("Suma de matrices"); break;
+                                                    case 2:
+                                                        System.out.println("Resta de matrices"); break;
+                                                    case 3:
+                                                        System.out.println("multiplicacion por un escalar");
+                                                    case 4:
+                                                        System.out.println("multiplicacion de una columna por una matriz"); break;
+                                                    case 5:
+                                                        System.out.println("multiplicacion de matrices"); break;
+                                                    case 6:
+                                                        System.out.println("rotacion de matrices"); break;
+                                                    case 7:
+                                                        break;
+                                                }
+                                            } while (opc2<3);
+
+                                    }
+
+                                            break;
 
                                         case 2:
                                             System.out.println("Selecciono matriz en R3"); break;
@@ -139,35 +152,20 @@ public class Main {
                                             break;
                                         default:
                                             System.out.println("Solo puede teclear los numeros seleccionados");
-                                    }
+                                    } while (opcs<3);
                                     try {
 
                                     } catch (Exception ex) {
                                         System.out.println("ERROR!! Solo puedes ingresar un numero");
                                         ex.printStackTrace();
                                     }
-                                } while (opcs<3);
+                                } int opcs;
+
+
                         }
 
                     }while (opcion<3);
-                break;
-
-                case 3:
-                    System.out.println("FIN DEL PROCESO");
-                break;
-
-                default:
-                    System.out.println("Solo numeros entre 1 al 3 ");
-            }
-            try {
-
-            } catch (Exception ex) {
-                System.out.println("Solo puedes insertar un numero");
-                sc.next();
-                ex.printStackTrace();
-            }
 
 
         }
-}
 }
