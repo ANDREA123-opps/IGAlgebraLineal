@@ -5,7 +5,7 @@ import edu.ujcv.progra2.vector.IGVecR2;
 public class IGMatR2 {
     // TODO: implementar.
 
-
+    double v[];
     double x1,y1;
     double x2,y2;
     private IGVecR2 f1;
@@ -43,7 +43,7 @@ public class IGMatR2 {
         this.col1.setX(f1.getX());
         this.col2.setX(f1.getY());
     }
-    public IGVecR2 getF2(){
+    public  IGVecR2 getF2(){
         IGVecR2 retval = new IGVecR2(col1.getY(), col2.getY());
         return retval;
     }
@@ -99,6 +99,10 @@ public class IGMatR2 {
     }
 
     public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
+        IGVecR2 retval = new IGVecR2();
+        IGMatR2 a = new IGMatR2();
+        a.col1.setX(thi.col1.getX(Math.cos(angulo)).b.col1.getX())
+        a.col1.setY((Math.sin(angulo)));
 
     return null;
     }
