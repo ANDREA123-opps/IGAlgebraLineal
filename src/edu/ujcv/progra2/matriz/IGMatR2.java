@@ -101,12 +101,12 @@ public class IGMatR2 {
     public static IGMatR2 rotacion (double angulo, IGVecR2 vector){
       IGMatR2 rot = new IGMatR2();
       double x;
-      //rot.col1.x = Math.cos(angulo);
-      //rot.col2.x = -Math.sin(angulo);
-      //rot.col1.x = Math.sin(angulo);
-      //rot.col2.x = Math.cos(angulo);
+      rot.col1.x = Math.cos(angulo);
+      rot.col2.x = -Math.sin(angulo);
+      rot.col1.x = Math.sin(angulo);
+      rot.col2.x = Math.cos(angulo);
       return rot.mul(vector);
-    //return null;
+
     }
 
 }

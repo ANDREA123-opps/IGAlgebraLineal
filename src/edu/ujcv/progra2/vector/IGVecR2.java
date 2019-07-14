@@ -3,6 +3,7 @@ package edu.ujcv.progra2.vector;
 public class IGVecR2 {
     public IGVecR2 col1;
     public IGVecR2 col2;
+    public double x;
 
     //privado los datos
     // un escalar que represente 'x' y 'y' los componentes del vector
