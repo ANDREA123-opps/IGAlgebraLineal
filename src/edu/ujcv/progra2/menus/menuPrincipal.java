@@ -8,14 +8,14 @@ public class menuPrincipal {
     public int opcion;
 
     public void mostrarOpciones (){
-
+        System.out.println("\n");
         System.out.println("--- Bienvenido a la Calculadora de Algebra Lineal ---");
         System.out.println("\n 1. Vectores");
-        System.out.println("\n 2.  Matrices");
+        System.out.println("\n 2. Matrices");
         System.out.println("\n 3. Salir");
     }
     public int leerOpciones(){
-        opcion = LTV.getInteger("ingrese una opcion", "Usted ingreso una opcion no valida");
+        opcion = LTV.getInteger("\n ingrese una opcion", "Usted ingreso una opcion no valida");
         return opcion;
     }
 
@@ -32,11 +32,17 @@ public class menuPrincipal {
                 break;
 
             case 3:
-                System.out.println("Gracias por su consulta");
+                System.out.println("Gracias por hacer el intento");
                 System.out.println("---VUELVA PRONTO---");
                 break;
-        }
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 3 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     LectorDeTecladoValidado LTV = LectorDeTecladoValidado.getInstance();
 }

@@ -3,9 +3,9 @@ package edu.ujcv.progra2.menus;
 public class EjecutarCodigo {
     private int opcion;
 
-    public void CorrerProgram() {
+    public void EjecutarCodigo() {
 
-        EjecutarCodigo menu = new EjecutarCodigo();
+        menuPrincipal menu = new menuPrincipal();
 
         do {
             menu.mostrarOpciones();
@@ -22,4 +22,5 @@ public class EjecutarCodigo {
 
     private void mostrarOpciones() {
     }
+
 }

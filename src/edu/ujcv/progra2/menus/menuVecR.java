@@ -10,18 +10,18 @@ public class menuVecR {
     public int opcion;
 
     public void mostrarOpcionR2() {
-        System.out.println("Has selecionado Vectores en R2 ");
-        System.out.println("\n 1. Suma de vectores");
-        System.out.println("\n 2. Resta de vectores");
-        System.out.println("\n 3. Multiplicacion por un escalar");
-        System.out.println("\n 4. Producto Punto");
-        System.out.println("\n 5. Magnitud");
-        System.out.println("\n 6. Angulo");
-        System.out.println("\n 7. Volver atras");
+        System.out.println("\n Has selecionado Vectores en R2 ");
+        System.out.println("1. Suma de vectores");
+        System.out.println("2. Resta de vectores");
+        System.out.println("3. Multiplicacion por un escalar");
+        System.out.println("4. Producto Punto");
+        System.out.println("5. Magnitud");
+        System.out.println("6. Angulo");
+        System.out.println("7. Volver atras");
     }
 
     public int LeeropcionR2() {
-        opcion = LTV.getInteger("Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
+        opcion = LTV.getInteger("\n Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
         return opcion;
     }
 
@@ -80,26 +80,33 @@ public class menuVecR {
                 break;
 
             case 7:
-                System.out.println("Has regresado al menu principal \n \n");
+                System.out.println("\nHas regresado al menu principal  \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 7 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
     }
 
     public void mostrarOpcionR3() {
-        System.out.println("\t Has salecionado Vectores en R3 ");
-        System.out.println("\n 1. Suma de vectore.");
-        System.out.println("\n 2. Resta de vectores.");
-        System.out.println("\n 3. Multiplicacion por un escalar.");
-        System.out.println("\n 4. Producto Punto.");
-        System.out.println("\n 5. Magnitud.");
-        System.out.println("\n 6. Angulo.");
-        System.out.println("\n 7. Producto Cruz");
-        System.out.println("\n 8. Volver atras.");
+        System.out.println("\n Has salecionado Vectores en R3 ");
+        System.out.println("1. Suma de vectore.");
+        System.out.println("2. Resta de vectores.");
+        System.out.println("3. Multiplicacion por un escalar.");
+        System.out.println("4. Producto Punto.");
+        System.out.println("5. Magnitud.");
+        System.out.println("6. Angulo.");
+        System.out.println("7. Producto Cruz");
+        System.out.println("8. Volver atras.");
     }
 
     public int LeeropcionR3() {
-        opcion = LTV.getInteger("Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
+        opcion = LTV.getInteger("\n Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
         return opcion;
     }
 
@@ -166,25 +173,32 @@ public class menuVecR {
                 break;
 
             case 8:
-                System.out.println("Has vuelto al menu principal \n \n");
+                System.out.println("\n Has vuelto al menu principal \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 8 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
     }
 
     public void mostrarOpcionR4() {
-        System.out.println("\t Has selecionado Vectores en R4 ");
-        System.out.println("\n 1. Suma de vectores");
-        System.out.println("\n 2. Resta de vectores");
-        System.out.println("\n 3. Multiplicacion por un escalar");
-        System.out.println("\n 4. Producto Punto");
-        System.out.println("\n 5. Magnitud");
-        System.out.println("\n 6. Angulo");
-        System.out.println("\n 7. Regresar");
+        System.out.println("\n Has selecionado Vectores en R4 ");
+        System.out.println("1. Suma de vectores");
+        System.out.println("2. Resta de vectores");
+        System.out.println("3. Multiplicacion por un escalar");
+        System.out.println("4. Producto Punto");
+        System.out.println("5. Magnitud");
+        System.out.println("6. Angulo");
+        System.out.println("7. Volver atras");
     }
 
     public int LeeropcionR4() {
-        opcion = LTV.getInteger("Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
+        opcion = LTV.getInteger("\n Ingrese una opción", "Ingreso una opción no valida. Intente de nuevo");
         return opcion;
     }
 
@@ -243,8 +257,15 @@ public class menuVecR {
                 break;
 
             case 7:
-                System.out.println("Has vuelto al menu principal \n \n");
+                System.out.println("\\n Has vuelto al menu principal  \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 7 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
     }
@@ -253,27 +274,27 @@ public class menuVecR {
     public IGVecR2 LeerVectorR2 (String nombreVec, String mensaje, String mensajeError) {
         IGVecR2 A = new IGVecR2(1.0, 1.1);
 
-        A.setX(LTV.getDouble("Ingrese el primer vector", "El caracter que ingreso no es válido. Por favor vuelva a intentar"));
-        A.setY(LTV.getDouble("Ingrese el segundo vector", "El caracter que ingreso no es válido. Por favor vuelva a intentar "));
+        A.setX(LTV.getDouble("Ingrese el primer componente", "El caracter que ingreso no es válido. Por favor vuelva a intentar"));
+        A.setY(LTV.getDouble("Ingrese el segundo componente", "El caracter que ingreso no es válido. Por favor vuelva a intentar "));
 
         return new IGVecR2(A);
     }
     public IGVecR3 LeerVectorR3 (String nombreVec, String mensaje, String mensajeError){
         IGVecR3 A = new IGVecR3(1.0, 1.1, 0.3);
 
-        A.setX((int) LTV.getDouble("Ingrese el primer vector", "El caracter que ingreso no es válido. Por Favor vueleva a intentar"));
-        A.setY((int) LTV.getDouble("Ingrese el segundo vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
-        A.setZ((int) LTV.getDouble("Ingrese el tercer vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar "));
+        A.setX((int) LTV.getDouble("Ingrese el primer componente", "El caracter que ingreso no es válido. Por Favor vueleva a intentar"));
+        A.setY((int) LTV.getDouble("Ingrese el segundo componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
+        A.setZ((int) LTV.getDouble("Ingrese el tercer componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar "));
 
         return new IGVecR3(A);
     }
     public IGVecR4 LeerVectorR4 (String nombreVec, String mensaje, String mesajeError){
         IGVecR4 A = new IGVecR4(1.0, 1.1, 0.3, 0.5);
 
-        A.setX(LTV.getDouble("Ingrese el primer vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
-        A.setY(LTV.getDouble("Ingrese el segundo vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
-        A.setZ(LTV.getDouble("Ingrese el tercer vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
-        A.setW(LTV.getDouble("Ingrese el cuarto vector", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
+        A.setX(LTV.getDouble("Ingrese el primer componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
+        A.setY(LTV.getDouble("Ingrese el segundo componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
+        A.setZ(LTV.getDouble("Ingrese el tercer componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
+        A.setW(LTV.getDouble("Ingrese el cuarto componente", "El caracter que ingreso no es válido. Por Favor vuelva a intentar"));
 
         return new IGVecR4(A);
     }

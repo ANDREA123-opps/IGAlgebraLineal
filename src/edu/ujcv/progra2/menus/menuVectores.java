@@ -6,21 +6,20 @@ public class menuVectores {
     public int opc2;
 
     menuVecR MDV = new menuVecR();
-    LectorDeTecladoValidado NM = LectorDeTecladoValidado.getInstance();
+    LectorDeTecladoValidado LTV = LectorDeTecladoValidado.getInstance();
 
     public void presentarOpciones(){
 
-        System.out.println(" Vectores");
-        System.out.println("\n Dimensiones \n");
-        System.out.println("\n 1. Vector en R2");
-        System.out.println("\n 2. Vector en R3");
-        System.out.println("\n 3.Vector en R4");
-        System.out.println("\n 4. Regresar al menu principal");
+        System.out.println("\n Has seleccionado Vectores");
+        System.out.println("1. Vector en R2");
+        System.out.println("2. Vector en R3");
+        System.out.println("3. Vector en R4");
+        System.out.println("4. Volver al menu principal");
 
     }
 
     public int leerOpciones() {
-        opc2 = NM.getInteger("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        opc2 = LTV.getInteger("\n Ingrese una opcion", "Ha ingresado una opcion erronea");
         return opc2;
     }
 
@@ -43,9 +42,15 @@ public class menuVectores {
                 break;
 
             case 4:
-                System.out.println("Has regresado al menu principal \n \n");
+                System.out.println("\n Has vuelto al menu principal \n \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 4 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
 
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opc2;
     }

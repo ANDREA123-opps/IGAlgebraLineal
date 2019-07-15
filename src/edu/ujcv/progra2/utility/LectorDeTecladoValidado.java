@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class LectorDeTecladoValidado {
 
+
     private static LectorDeTecladoValidado instance;
     private Scanner sc;
 

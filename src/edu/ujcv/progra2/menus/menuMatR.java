@@ -13,19 +13,19 @@ public class menuMatR {
     LectorDeTecladoValidado LTV = LectorDeTecladoValidado.getInstance();
 
     public void mostrarOpcionesMatR2 (){
-        System.out.println("Matrices de orden 2");
-        System.out.println("\n 1. suma");
-        System.out.println("\n 2. resta");
-        System.out.println("\n 3. Multiplicación");
-        System.out.println("\n 4. Multiplicación por vector");
-        System.out.println("\n 5. Multiplicación por escalar");
-        System.out.println("\n 6. Rotación");
-        System.out.println("\n 7. Regresar");
+        System.out.println("\n Has selecionado Matrices de 2x2");
+        System.out.println("1. suma de matrices");
+        System.out.println("2. resta de matrices");
+        System.out.println("3. Multiplicación de matrices");
+        System.out.println("4. Multiplicación por vector");
+        System.out.println("5. Multiplicación por escalar");
+        System.out.println("6. Rotación");
+        System.out.println("7. Volver atras");
 
     }
 
     public int leerOpcionMatR2 (){
-        opcion = LTV.getInteger("Ingrese una opcion", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
+        opcion = LTV.getInteger("\n Ingrese una opcion", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
         return opcion;
     }
     public int operandoMatR2 (int opcion){
@@ -36,7 +36,7 @@ public class menuMatR {
                 IGMatR2 mat2 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
                 IGMatR2 Resl = mat1.suma(mat2);
 
-                System.out.println("La suma de matrices es:");
+                System.out.println("El resultado de la suma de matrices es:");
                 imprimirMatR2(Resl);
                 break;
 
@@ -45,7 +45,7 @@ public class menuMatR {
                 IGMatR2 mat4 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
                 IGMatR2 Resl2 = mat3.resta(mat4);
 
-                System.out.println("la resta de marices es: ");
+                System.out.println("El resultado de la resta de marices es: ");
                 imprimirMatR2(Resl2);
                 break;
 
@@ -54,7 +54,7 @@ public class menuMatR {
                 IGMatR2 mat7 = leerMatR2("Matriz 2", "Ingrese la matriz 2", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
                 IGMatR2 Resl3 = mat6.mulVector(mat7);
 
-                System.out.println("La multiplicacion de matrices es: ");
+                System.out.println("El resultado de la multiplicacion de matrices es: ");
                 imprimirMatR2(Resl3);
                 break;
             case 4:
@@ -64,7 +64,7 @@ public class menuMatR {
                 v.setY(LTV.getDouble("Ingrese el segundo numero vector","Error! Ha ingresado un caracter no valido"));
                 IGMatR2 Resl4 = mat8.mul(v);
 
-                System.out.println("La multiplicacion de matriz por vector es \n" );
+                System.out.println("El resultado de la multiplicacion de matriz por vector es \n" );
                 System.out.println("|\t"+ Resl4.getX()+"\t|");
                 System.out.println("|\t"+ Resl4.getY()+"\t|");
                 break;
@@ -75,7 +75,7 @@ public class menuMatR {
                 IGMatR2 mat9 = leerMatR2("Matriz 1", "Ingrese la matriz 1", "El caracter que ingreso NO es válido. Por favor vuelva a intentar");
                 IGMatR2 Resl5 = mat9.escalarXmat(alpha);
 
-                System.out.println("La multiplicacion por un escalar es:\n ");
+                System.out.println("El resultado de la multiplicacion por un escalar es:\n ");
                 imprimirMatR2(Resl5);
                 break;
             case 6:
@@ -90,24 +90,31 @@ public class menuMatR {
             case 7:
                 System.out.println("Estas de vuelta en el menu principal \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 7 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
     }
     public void mostrarOpcionesMatR3() {
-        System.out.println("\t Matrices de orden 3");
-        System.out.println("\n 1.Suma");
-        System.out.println("\n 2.Resta");
-        System.out.println("\n 3. Multiplicacion por un escalar");
-        System.out.println("\n 4. Multiplicacion por un vector");
-        System.out.println("\n 5. Multiplicacion por una matriz");
-        System.out.println("\n 6. Rotación en X");
-        System.out.println("\n 7. Rotación en Y");
-        System.out.println("\n 8. Rotación en Z");
-        System.out.println("\n 9. Regresar");
+        System.out.println("\n Has seleccionado Matrices de 3x3");
+        System.out.println("1. Suma de matrices");
+        System.out.println("2. Resta de matrices");
+        System.out.println("3. Multiplicacion por un escalar");
+        System.out.println("4. Multiplicacion por un vector");
+        System.out.println("5. Multiplicacion por una matriz");
+        System.out.println("6. Rotación en X");
+        System.out.println("7. Rotación en Y");
+        System.out.println("8. Rotación en Z");
+        System.out.println("9. Volver atras");
     }
 
     public int leerOpcionesMatR3() {
-        opcion = LTV.getInteger("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        opcion = LTV.getInteger("\n Ingrese una opcion", "Ha ingresado una opcion erronea");
         return opcion;
     }
 
@@ -118,7 +125,7 @@ public class menuMatR {
                 IGMatR3 mat2 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGMatR3 Resul = mat1.suma(mat2);
 
-                System.out.println("La suma de matrices es \n");
+                System.out.println("El resultado de la suma de matrices es \n");
                 imprimirMatR3(Resul);
                 break;
 
@@ -126,7 +133,7 @@ public class menuMatR {
                 IGMatR3 mat3 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 IGMatR3 mat4 = leerMatR3("Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGMatR3 Resul2 = mat3.resta(mat4);
-                System.out.println("La resta de matrices es \n");
+                System.out.println("El resultado de la resta de matrices es \n");
                 imprimirMatR3(Resul2);
                 break;
             case 3:
@@ -134,7 +141,7 @@ public class menuMatR {
                 alpha = LTV.getDouble("Ingrese el escalar", "Error ha ingresado un caracter no valido");
                 IGMatR3 mat5 = leerMatR3("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 IGMatR3 res3 = mat5.escalarXmat(alpha);
-                System.out.println("La multiplicacion de una matriz por un escalar es \n");
+                System.out.println("El sesultado de la multiplicacion de una matriz por un escalar es \n");
                 imprimirMatR3(res3);
                 break;
 
@@ -147,7 +154,7 @@ public class menuMatR {
                 v.setZ((int) LTV.getDouble("Ingrese el tercer numero del vector","Error! Ha ingresado un caracter no valido"));
                 IGVecR3 Resul4 = mat6.mul(v);
 
-                System.out.println("La multiplicacion de matriz por vector es \n" );
+                System.out.println("El rsultado de la multiplicacion de matriz por vector es \n" );
                 System.out.println("|\t"+ Resul4.getX()+"\t|");
                 System.out.println("|\t"+ Resul4.getY()+"\t|");
                 System.out.println("|\t"+ Resul4.getZ()+"\t|");
@@ -159,7 +166,7 @@ public class menuMatR {
                 IGMatR3 mat8 = leerMatR3("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGMatR3 Resul5 = mat7.mul(mat8);
 
-                System.out.println("La multiplicacion de matrices es \n");
+                System.out.println("El resultado de la multiplicacion de matrices es \n");
                 imprimirMatR3(Resul5);
                 break;
 
@@ -191,24 +198,31 @@ public class menuMatR {
                 break;
 
             case 9:
-                System.out.println("Has regresado al menu principal \n \n");
+                System.out.println("Has vuelto al menu principal \n \n");
                 break;
+            default:
+                System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 9 )");
+                System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
     }
 
     public void mostrarOpcionesMatR4() {
-        System.out.println("\t \t \t \t Matrices de orden 4");
-        System.out.println("\n 1.Suma");
-        System.out.println("\n 2.Resta");
-        System.out.println("\n 3.Multiplicacion por un escalar");
-        System.out.println("\n 4. Multiplicacion por un vector");
-        System.out.println("\n 5. Multiplicacion por una matriz");
-        System.out.println("\n 6. Regresar al menu principal");
+        System.out.println("\n Has seleccionado Matrices de 4x4");
+        System.out.println("1. Suma de matrices");
+        System.out.println("2. Resta de matrices");
+        System.out.println("3. Multiplicacion por un escalar");
+        System.out.println("4. Multiplicacion por un vector");
+        System.out.println("5. Multiplicacion por una matriz");
+        System.out.println("6. Regresar al menu principal");
     }
 
     public int leerOpcionesMatR4() {
-        opcion = LTV.getInteger("Ingrese una opcion", "Ha ingresado una opcion erronea");
+        opcion = LTV.getInteger("\n Ingrese una opcion", "Ha ingresado una opcion erronea");
         return opcion;
     }
 
@@ -219,7 +233,7 @@ public class menuMatR {
                 IGMatR4 mat2 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGMatR4 Resul = mat1.suma(mat2);
 
-                System.out.println("La suma de matrices es \n");
+                System.out.println("El resultado de la suma de matrices es \n");
                 imprimirMatR4(Resul);
                 break;
 
@@ -227,7 +241,7 @@ public class menuMatR {
                 IGMatR4 mat3 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 IGMatR4 mat4 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGMatR4 res2 = mat3.suma(mat4);
-                System.out.println("La suma de matrices es \n");
+                System.out.println("El resultado de la suma de matrices es \n");
                 imprimirMatR4(res2);
                 break;
 
@@ -237,7 +251,7 @@ public class menuMatR {
                 IGMatR4 mat5 = leerMatR4("Matriz 1", "Ingrese la matriz 1", "Error ha ingresado un caracter no valido");
                 IGMatR4 res3 = mat5.mulEscalar(alpha);
 
-                System.out.println("La multiplicacion de una matriz por un escalar es \n");
+                System.out.println("El resultado de la multiplicacion de una matriz por un escalar es \n");
                 imprimirMatR4(res3);
                 break;
 
@@ -250,7 +264,7 @@ public class menuMatR {
                 v.setW(LTV.getDouble("Ingrese el tercer numero del vector", "Error! Ha ingresado un caracter no valido"));
                 IGVecR4 res4 = mat6.mulVector(v);
 
-                System.out.println("La multiplicacion de matriz por vector es \n");
+                System.out.println("El resultado de la multiplicacion de matriz por vector es \n");
                 System.out.println("|\t" + res4.getX() + "\t|");
                 System.out.println("|\t" + res4.getY() + "\t|");
                 System.out.println("|\t" + res4.getZ() + "\t|");
@@ -262,13 +276,20 @@ public class menuMatR {
                 IGMatR4 mat8 = leerMatR4("\n Matriz 2", "Ingrese la matriz 2", "Error ha ingresado un caracter no valido");
                 IGVecR4 res5 = mat7.mulVector(mat8);
 
-                System.out.println("La multiplicacion de matrices es \n");
+                System.out.println("El resultado de la multiplicacion de matrices es \n");
                 imprimirMatR4(res5);
                 break;
 
             case 6:
-                System.out.println("Has regresado al menu principal \n \n");
+                System.out.println("\n Has vuelto al menu principal  \n");
                 break;
+                default:
+                    System.out.println("Solo puedes ingresar los numeros seleccionados ( del 1 al 6 )");
+                    System.out.println("Vuelve a ingresar un numero");
+        }try {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return opcion;
 
