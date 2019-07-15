@@ -2,16 +2,15 @@ package edu.ujcv.progra2.menus;
 
 import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
 
-public class menuPrincipal {
-    menuVectores menVec = new menuVectores();
-    menuMatrices menMat = new menuMatrices();
+public class menuCalculadora {
+    menuPrincipal CL = new menuPrincipal();
+    menuCalcBasc CB = new menuCalcBasc();
     public int opcion;
-
     public void mostrarOpciones (){
         System.out.println("\n");
-        System.out.println("--- Bienvenido a la Calculadora de Algebra Lineal ---");
-        System.out.println("\n 1. Vectores");
-        System.out.println("\n 2. Matrices");
+        System.out.println("--- Bienvenido Usuario ---");
+        System.out.println("\n 1. Calculadora de Algebra Lineal");
+        System.out.println("\n 2. Calculadora Basica");
         System.out.println("\n 3. Salir");
     }
     public int leerOpciones(){
@@ -22,13 +21,13 @@ public class menuPrincipal {
     public void Operando (int opcion){
         switch (opcion){
             case 1:
-                menVec.presentarOpciones();
-                menVec.procesarOpcion(menVec.leerOpciones());
+                CL.presentarOpciones();
+                CL.procesarOpcion(CL.leerOpciones());
                 break;
 
             case 2:
-                menMat.mostrarOpciones();
-                menMat.procesarOpcion(menMat.leerOpciones());
+                CB.mostrarOpciones();
+                CB.procesarOpcion(CB.leerOpciones());
                 break;
 
             case 3:
@@ -46,9 +45,5 @@ public class menuPrincipal {
     }
     LectorDeTecladoValidado LTV = LectorDeTecladoValidado.getInstance();
 
-    public void presentarOpciones() {
-    }
 
-    public void procesarOpcion(int leerOpciones) {
-    }
 }
