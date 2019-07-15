@@ -100,4 +100,28 @@ public class IGVecR3 {
     public void setK(double k) {
         this.k = k;
     }
+
+    public void setX(int i) {
+
+    }
+
+    public void setY(int i) {
+
+    }
+
+    public void setZ(int i) {
+
+    }
+
+    public double getX() {
+        return 0;
+    }
+
+    public int getY() {
+        return 0;
+    }
+
+    public int getZ() {
+        return 0;
+    }
 }

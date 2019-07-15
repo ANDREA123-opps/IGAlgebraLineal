@@ -7,7 +7,7 @@ public class IGVecR4 {
     private double z;
     private double w;
 
-    public IGVecR4(){
+    public IGVecR4(double z, double col2Z, double col3Z, double col4Z){
         this.x = 0;
         this.y = 0;
         this.z = 0;
@@ -26,7 +26,11 @@ public class IGVecR4 {
         this.w = b.w;
     }
      public IGVecR4 suma (IGVecR4 b){
-    IGVecR4 retval = new IGVecR4();
+         IGVecR4 col1 = null;
+         IGVecR4 col2 = null;
+         IGVecR4 col3 = null;
+         IGVecR4 col4 = null;
+         IGVecR4 retval = new IGVecR4(col1.getZ(), col2.getZ(), col3.getZ(), col4.getZ());
     retval.x = (x + b.x);
     retval.y = (y + b.y);
     retval.z = (z + b.z);
@@ -35,7 +39,11 @@ public class IGVecR4 {
 }
 
     public IGVecR4 resta(IGVecR4 b){
-        IGVecR4 retval = new IGVecR4();
+        IGVecR4 col1 = null;
+        IGVecR4 col2 = null;
+        IGVecR4 col3 = null;
+        IGVecR4 col4 = null;
+        IGVecR4 retval = new IGVecR4(col1.getZ(), col2.getZ(), col3.getZ(), col4.getZ());
         retval.x = (x - b.x);
         retval.y = (y - b.y);
         retval.z = (z - b.z);
@@ -44,7 +52,11 @@ public class IGVecR4 {
     }
 
     public  IGVecR4 escalarPorVector(double alpha){
-        IGVecR4 retval = new IGVecR4();
+        IGVecR4 col1 = null;
+        IGVecR4 col2 = null;
+        IGVecR4 col3 = null;
+        IGVecR4 col4 = null;
+        IGVecR4 retval = new IGVecR4(col1.getZ(), col2.getZ(), col3.getZ(), col4.getZ());
         retval.x = (alpha * x);
         retval.y = (alpha * y);
         retval.z = (alpha * z);
