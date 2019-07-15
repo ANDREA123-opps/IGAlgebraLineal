@@ -3,7 +3,7 @@ package edu.ujcv.progra2.vector;
 public class IGVecR2 {
     public IGVecR2 col1;
     public IGVecR2 col2;
-    public double x;
+
 
     //privado los datos
     // un escalar que represente 'x' y 'y' los componentes del vector
@@ -26,7 +26,7 @@ public class IGVecR2 {
     double y1 = 0;
     double y2 = 0;
 
-    private double x;
+    public double x;
    private double y;
 
     public IGVecR2() {
@@ -59,8 +59,8 @@ public class IGVecR2 {
     }
 
     public IGVecR2 suma(IGVecR2 b) {
-        x = this.x + this.y;
-        y = b.x + b.y;
+        x = x1 + y1;
+        y = x2 + y2;
         IGVecR2 retval = new IGVecR2(x, y);
         return retval;
     }
@@ -68,8 +68,8 @@ public class IGVecR2 {
 
     public IGVecR2 resta(IGVecR2 b){
         //TODO: implementar
-        x = this.x - b.x;
-        y = this.y - b.y;
+        x = x1 - y1;
+        y = x2 - y2;
         IGVecR2 retval = new IGVecR2(x, y);
         return retval;
     }
@@ -86,7 +86,7 @@ public class IGVecR2 {
     public  double productoPunto(IGVecR2 b){
         //TODO: implementar
        double retval;
-       retval = (x * b.x)+(y * b.y);
+       retval = (x1 * y1)+(x2 * y2);
        return retval;
 
 
