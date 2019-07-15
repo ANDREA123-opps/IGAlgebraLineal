@@ -1,4 +1,10 @@
 package edu.ujcv.progra2;
+
+import edu.ujcv.progra2.matriz.IGMatR2;
+import edu.ujcv.progra2.vector.IGVecR2;
+import edu.ujcv.progra2.vector.IGVecR3;
+import edu.ujcv.progra2.vector.IGVecR4;
+
 import java.util.Scanner;
 public class Main {
 
@@ -38,17 +44,31 @@ public class Main {
                                 do {
                                     System.out.println("Seleccione el operador");
                                     System.out.println("1- suma de vectores     ");
-                                    System.out.println("     5- Angulo");
                                     System.out.println("2- resta de vectores    ");
-                                    System.out.println("     6- Magnitud");
                                     System.out.println("3- Escalar por un vector     ");
-                                    System.out.println("     7- Volver atras");
                                     System.out.println("4- Producto punto");
+                                    System.out.println("5- Angulo");
+                                    System.out.println("6- Magnitud");
+                                    System.out.println("7- Volver atras");
                                     opc1 = sc.nextInt();
 
                                     switch (opc1) {
                                         case 1:
-                                            System.out.println("Suma de vectores");
+                                            System.out.println("---Suma de vectores---");
+                                            IGVecR2 a = new IGVecR2();
+                                            System.out.println("Ingrese los componentes del vector x1 y y1");
+                                            a.setX(sc.nextDouble());
+                                            a.setY(sc.nextDouble());
+                                            IGVecR2 b = new IGVecR2();
+                                            System.out.println("Ingrese los componentes del vector x2 y y2");
+                                            b.setX(sc.nextDouble());
+                                            b.setY(sc.nextDouble());
+                                            IGVecR2 x = a.suma(b);
+                                            IGVecR2 y = a.suma(b);
+                                            System.out.println("La suma de los vectores X + Y = "+ x.getX()+","+y.getY() );
+
+
+                                            System.out.println("");
                                             break;
 
                                         case 2:
@@ -185,4 +205,36 @@ public class Main {
             }
         }while (opcion <3);
     }
+    public void imprimirIGVecR2 (IGVecR2 a){
+        System.out.println("(" + a.getX() +","+ a.getY()+ ")");
+    }
+
+    public void imprimirIGVecR3(IGVecR3 a){
+
+        System.out.println("(" + a.getI() +","+ a.getJ() +","+ a.getK()+")");
+    }
+
+    public void imprimirIGVecR4 (IGVecR4 a){
+        System.out.println("(" + a.getX() +","+ a.getY() +","+ a.getZ() +","+ a.getW()+")");
+    }
+
+    public void imprimirMatR2(IGMatR2 a){
+        System.out.println("|\t" + a.getCol1().getX() + "  " + a.getCol1().getX() + "\t|");
+        System.out.println("|\t" + a.getCol1().getY() + "  " + a.getCol1().getY() + "\t|");
+    }
+
+    // public void imprimirMatR3(IGMatR3 a){
+       // System.out.println("|\t" + a.getCol1().getX() + "  " + a.getCol2().getX() + "  " + a.getCol3().getX() + "\t|");
+       // System.out.println("|\t" + a.getCol1().getY() + "  " + a.getCol2().getY() + "  " + a.getCol3().getY() + "\t|");
+       // System.out.println("|\t" + a.getCol1().getZ() + "  " + a.getCol2().getZ() + "  " + a.getCol3().getZ() + "\t|");
+   //}
+
+   // public void imprimirMatR4(IGMatR4 a){
+      //  System.out.println("|\t" + a.getCol1().getX() + "  " + a.getCol2().getX() + "  " + a.getCol3().getX() + "  "+ a.getCol4().getX() + "\t|");
+     //   System.out.println("|\t" + a.getCol1().getY() + "  " + a.getCol2().getY() + "  " + a.getCol3().getY() + "  "+ a.getCol4().getY() + "\t|");
+      //  System.out.println("|\t" + a.getCol1().getZ() + "  " + a.getCol2().getZ() + "  " + a.getCol3().getZ() + "  "+ a.getCol4().getZ() + "\t|");
+      //  System.out.println("|\t" + a.getCol1().getW() + "  " + a.getCol2().getW() + "  " + a.getCol3().getW() + "  "+ a.getCol4().getW() + "\t|");
+    //}
+
+
 }

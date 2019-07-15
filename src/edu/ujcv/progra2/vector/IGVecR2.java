@@ -59,18 +59,18 @@ public class IGVecR2 {
     }
 
     public IGVecR2 suma(IGVecR2 b) {
-        x = x1 + y1;
-        y = x2 + y2;
-        IGVecR2 retval = new IGVecR2(x, y);
+        IGVecR2 retval = new IGVecR2();
+        retval.x = x1 + y1;
+        retval.y = x2 + y2;
         return retval;
     }
 
 
     public IGVecR2 resta(IGVecR2 b){
         //TODO: implementar
-        x = x1 - y1;
-        y = x2 - y2;
-        IGVecR2 retval = new IGVecR2(x, y);
+        IGVecR2 retval = new IGVecR2();
+        retval.x = x1 - y1;
+        retval.y = x2 - y2;
         return retval;
     }
 
